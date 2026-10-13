@@ -2,20 +2,6 @@
 
 ## Pending
 
-### Task 13: POS Screen Restyle (Stitch "Products")
-**Reference**: `design/stitch/1-products.png` + `1-products.html`
-
-**Scope** (visual only; keep current behavior: add-to-cart, stock cap, settings/products/reports nav):
-- Header: brand + status ticker line, product search field.
-- Filter chips row (All / categories — keep only if cheap with current data, else skip).
-- Product rows: name, price, stock ("15 IN STOCK" / "OUT OF STOCK" label), `[ + ]` add button (disabled at stock 0 — keep Task 11 behavior).
-- Bottom: current ticket summary + `[ CART (n) ]` bar replacing the FAB.
-
-**Files likely involved**:
-- `lib/presentation/screens/pos_screen.dart`
-
----
-
 ### Task 14: Cart Screen Restyle (Stitch "Cart")
 **Reference**: `design/stitch/2-cart.png` + `2-cart.html`
 
@@ -71,6 +57,24 @@
 ---
 
 ## Completed
+
+### Task 13: POS Screen Restyle (Stitch "Products") ✓
+**Completed**: 2026-10-13
+
+**Reference**: `design/stitch/1-products.png` + `1-products.html`
+
+**Changes Made**:
+- Full-screen restyle (no AppBar/FAB): monochrome terminal layout matching the mockup
+- Header block: status ticker line, brand name (from `SettingsProvider`) + nav icons (products/reports/settings kept), search field (filters products by name, case-insensitive), meta row (`ALL / PRODUCTS / n SKU`, `n shown`)
+- Product rows: square glyph, name, price + stock line (`15 IN STOCK` / `OUT OF STOCK` in red), `[ + ]` `OutlineBracketButton` disabled at stock 0 (Task 11 behavior kept), dashed dividers between rows
+- Category chips skipped: `Product` model has no category field (allowed by task scope)
+- Bottom bar replaces FAB: `CURRENT TICKET DRAFT / ITEMS: n UNITS` meta + full-width `[ CART (n)  Rp ... >> ]` `BracketButton` (disabled when cart empty) + `PRESS TO EMIT BILL / PRINTER READY [OK]` footer
+- Empty-search state shows `No products match "..."`; loading/error/empty-product states kept
+
+**Files Modified**:
+- `lib/presentation/screens/pos_screen.dart`
+
+**Verified**: `flutter analyze` clean (1 pre-existing info in `reports_screen.dart`).
 
 ### Task 12: Stitch Design Tokens + Shared Terminal UI ✓
 **Completed**: 2026-10-13

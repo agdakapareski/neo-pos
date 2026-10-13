@@ -96,7 +96,7 @@ class OutlineBracketButton extends StatelessWidget {
         ),
         textStyle: AppTheme.labelMd,
       ),
-      child: Text('[ $label ]'),
+      child: Text('[ $label ]', maxLines: 1, softWrap: false),
     );
 
     if (expand) {
