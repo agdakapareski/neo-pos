@@ -2,20 +2,6 @@
 
 ## Pending
 
-### Task 14: Cart Screen Restyle (Stitch "Cart")
-**Reference**: `design/stitch/2-cart.png` + `2-cart.html`
-
-**Scope** (keep quantity cap, remove item, totals math):
-- "CURRENT ORDER TICKET" header with ticket meta line.
-- Item rows: index (`01/`), name, price, qty stepper `[ - ] n [ + ]`, `[ REMOVE ITEM ]` (keep stock cap on `+`).
-- Totals block: items count, subtotal, tax line, discount (only if already supported — no new fields), total.
-- `[ PROCEED / RP ... ]` full-width bottom action (replaces current checkout button).
-
-**Files likely involved**:
-- `lib/presentation/screens/cart_screen.dart`
-
----
-
 ### Task 15: Payment Screen Restyle (Stitch "Payment")
 **Reference**: `design/stitch/3-payment.png` + `3-payment.html`
 
@@ -57,6 +43,24 @@
 ---
 
 ## Completed
+
+### Task 14: Cart Screen Restyle (Stitch "Cart") ✓
+**Completed**: 2026-10-13
+
+**Reference**: `design/stitch/2-cart.png` + `2-cart.html`
+
+**Changes Made**:
+- Full-screen restyle (no AppBar): back arrow + `CURRENT ORDER TICKET` header, `NEW ORDER` badge + timestamp meta line
+- Item rows: index (`01/`), name, line subtotal right, qty stepper `[ - ] n [ + ]`, `[ REMOVE ITEM ]` `OutlineBracketButton`
+- Stock cap kept on `+` (disabled at `quantity >= stock`), minus at qty 1 removes item (existing behavior)
+- Totals block: items count, subtotal, tax line (`TAX (11% INCL.)` — labeled incl., no new tax field), no discount line (not supported in cart; discount stays on payment screen), `TOTAL DUE`
+- `[ PROCEED / Rp ... ]` full-width `BracketButton` replaces Checkout button
+- Dashed dividers between rows, empty-cart label kept
+
+**Files Modified**:
+- `lib/presentation/screens/cart_screen.dart`
+
+**Verified**: `flutter analyze` clean (1 pre-existing info in `reports_screen.dart`).
 
 ### Task 13: POS Screen Restyle (Stitch "Products") ✓
 **Completed**: 2026-10-13
