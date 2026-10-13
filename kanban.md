@@ -2,7 +2,102 @@
 
 ## Pending
 
+### Task 13: POS Screen Restyle (Stitch "Products")
+**Reference**: `design/stitch/1-products.png` + `1-products.html`
+
+**Scope** (visual only; keep current behavior: add-to-cart, stock cap, settings/products/reports nav):
+- Header: brand + status ticker line, product search field.
+- Filter chips row (All / categories — keep only if cheap with current data, else skip).
+- Product rows: name, price, stock ("15 IN STOCK" / "OUT OF STOCK" label), `[ + ]` add button (disabled at stock 0 — keep Task 11 behavior).
+- Bottom: current ticket summary + `[ CART (n) ]` bar replacing the FAB.
+
+**Files likely involved**:
+- `lib/presentation/screens/pos_screen.dart`
+
+---
+
+### Task 14: Cart Screen Restyle (Stitch "Cart")
+**Reference**: `design/stitch/2-cart.png` + `2-cart.html`
+
+**Scope** (keep quantity cap, remove item, totals math):
+- "CURRENT ORDER TICKET" header with ticket meta line.
+- Item rows: index (`01/`), name, price, qty stepper `[ - ] n [ + ]`, `[ REMOVE ITEM ]` (keep stock cap on `+`).
+- Totals block: items count, subtotal, tax line, discount (only if already supported — no new fields), total.
+- `[ PROCEED / RP ... ]` full-width bottom action (replaces current checkout button).
+
+**Files likely involved**:
+- `lib/presentation/screens/cart_screen.dart`
+
+---
+
+### Task 15: Payment Screen Restyle (Stitch "Payment")
+**Reference**: `design/stitch/3-payment.png` + `3-payment.html`
+
+**Scope** (keep Task 10 logic: amountDue = total - discount, change calc, validation, stored total):
+- Order checkout header with ticker meta (ticket id, table label = static meta line ok).
+- Summary: cart total, discount, `TOTAL DUE` (bold receipt block).
+- Payment method: two selectable cards `[ CASH ]` / `[ QRIS ]` (map to existing `PaymentMethod` values; dropdown stays under the hood or gets replaced by cards).
+- Cash received field + quick tender presets `[ EXACT ] [ +50K ] [ +100K ]` (functional: fill nominal).
+- Change due block (`KEMBALIAN`).
+- `[ COMPLETE & PRINT RECEIPT ]` bottom action.
+
+**Files likely involved**:
+- `lib/presentation/screens/payment_screen.dart`
+
+---
+
+### Task 16: Receipt Screen Restyle (Stitch "Receipt")
+**Reference**: `design/stitch/4-receipt.png` + `4-receipt.html`
+
+**Scope** (keep Task 5 export PNG + read-only from-reports mode + Task 6 brand name):
+- `RECEIPT PRINT PREVIEW` header + `[ PAYMENT COMMITTED ]` badge.
+- Receipt paper block: store name/address lines, date + ticket no, item rows (qty x price, line total), subtotal/discount/total, payment method/change, footer thank-you text.
+- Barcode placeholder strip (decorative, no new scanning feature).
+- `[ PRINT/PNG ]` + `[ NEW ORDER ]` actions (keep existing export + back logic).
+
+**Files likely involved**:
+- `lib/presentation/screens/receipt_screen.dart`
+
+---
+
+### Task 17 (optional): Bottom Nav Bar `[MENU] [CART] [LOG] [SETUP]`
+**Scope**:
+- Replace AppBar icon navigation with a fixed bottom bar matching the mockups (POS = menu, Cart, Reports = log, Settings = setup). Cart shows count badge.
+- Only after Tasks 13-16 land. Skip if current navigation proves sufficient.
+
+**Files likely involved**:
+- `lib/presentation/screens/pos_screen.dart` (or a small shell widget)
+
+---
+
 ## Completed
+
+### Task 12: Stitch Design Tokens + Shared Terminal UI ✓
+**Completed**: 2026-10-13
+
+**Scope**:
+- Design references downloaded to `design/stitch/` (4 PNG + 4 HTML, "Receipt POS System" / Kopisop JOS).
+- Adopted **Stitch monochrome** style (black/white/gray, Space Mono look), replacing white/green for the POS flow screens. Font: **system monospace** (no new dependency).
+- Extracted design tokens from `design/stitch/*.html` Tailwind config into `lib/core/theme/app_theme.dart`.
+- Small shared widgets only where reused across screens. No design system, no abstractions beyond that.
+- `UI_DESIGN.md` note recording the monochrome decision.
+
+**Changes Made**:
+- `app_theme.dart` rewritten: surface `#f9f9f9`, primary `#000000`, on-surface `#1a1c1c`, outline `#7e7576`, error `#ba1a1a`, spacing (4/8/16/24/40), radius (4/8/12), mono text styles with label letterSpacing. Legacy color aliases kept so existing screens compile.
+- Shared widgets in `lib/core/widgets/`: `BracketButton`, `OutlineBracketButton`, `TerminalLabel`, `DashedDivider`.
+- `UI_DESIGN.md`: monochrome decision note added (supersedes white/green for POS flow screens).
+
+**Files Modified**:
+- `lib/core/theme/app_theme.dart`
+- `UI_DESIGN.md`
+
+**Files Created**:
+- `design/stitch/` (4 PNG + 4 HTML references)
+- `lib/core/widgets/bracket_button.dart`
+- `lib/core/widgets/terminal_label.dart`
+- `lib/core/widgets/dashed_divider.dart`
+
+**Verified**: `flutter analyze` clean (1 pre-existing info in `reports_screen.dart`). `flutter test` fails only on the stale default counter smoke test (`test/widget_test.dart`) — pre-existing, unrelated.
 
 ### Task 11: Cap Cart Quantity at Stock (Block Out-of-Stock Add) ✓
 **Completed**: 2026-10-07

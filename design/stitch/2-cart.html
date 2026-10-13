@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-highest": "#e2e2e2", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#1b1b1b", "primary-fixed": "#e2e2e2", "on-primary-fixed": "#1b1b1b", "tertiary-fixed": "#e2e2e2", "surface": "#f9f9f9", "on-secondary-container": "#656464", "on-surface-variant": "#4c4546", "on-secondary-fixed": "#1c1b1b", "on-secondary-fixed-variant": "#474646", "primary-fixed-dim": "#c6c6c6", "surface-variant": "#e2e2e2", "on-tertiary-fixed-variant": "#474747", "error-container": "#ffdad6", "surface-tint": "#5e5e5e", "outline-variant": "#cfc4c5", "background": "#f9f9f9", "inverse-surface": "#2f3131", "on-primary-fixed-variant": "#474747", "inverse-primary": "#c6c6c6", "primary": "#000000", "on-secondary": "#ffffff", "surface-container-high": "#e8e8e8", "secondary": "#5f5e5e", "on-background": "#1a1c1c", "outline": "#7e7576", "on-error": "#ffffff", "inverse-on-surface": "#f1f1f1", "surface-container": "#eeeeee", "on-primary": "#ffffff", "secondary-container": "#e5e2e1", "surface-bright": "#f9f9f9", "secondary-fixed": "#e5e2e1", "tertiary": "#000000", "on-error-container": "#93000a", "surface-container-low": "#f3f3f3", "tertiary-container": "#1b1b1b", "primary-container": "#1b1b1b", "on-tertiary": "#ffffff", "secondary-fixed-dim": "#c8c6c5", "tertiary-fixed-dim": "#c6c6c6", "surface-dim": "#dadada", "error": "#ba1a1a", "on-primary-container": "#848484", "on-surface": "#1a1c1c", "on-tertiary-container": "#848484" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "space-md": "1rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter": "1rem", "margin": "1rem", "gutter-desktop": "1.5rem", "margin-desktop": "2rem" }, "fontFamily": { "headline-lg": ["Space Mono"], "label-lg": ["Space Mono"], "label-md": ["Space Mono"], "headline-sm": ["Space Mono"], "headline-md": ["Space Mono"], "headline-lg-mobile": ["Space Mono"], "headline-xl": ["Space Mono"], "body-md": ["Space Mono"], "headline-xl-mobile": ["Space Mono"], "label-sm": ["Space Mono"], "body-lg": ["Space Mono"], "body-sm": ["Space Mono"] }, "fontSize": { "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "700" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex flex-col justify-center gap-0.5"><div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest"><span class="inline-block w-1.5 h-1.5 bg-primary"></span><span>ONLINE</span><span>#80MM</span><span class="material-symbols-outlined text-[13px] leading-none">receipt_long</span><span>ROLL:94%</span><span class="material-symbols-outlined text-[13px] leading-none">battery_full</span></div><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface">KOPISOP JOS</span><span class="text-on-surface-variant font-label-sm text-label-sm">::</span><span class="font-label-md text-label-md uppercase text-on-surface-variant">Cart</span></div></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-gutter py-space-sm font-body-md text-on-surface">
+<!-- Mechanical Reel Feed Indicator -->
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm uppercase mb-space-xs px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 bg-primary inline-block"></span>
+<span>PRN-BUFFER::ACTIVE</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span>SERRATION: 80MM</span>
+<span class="material-symbols-outlined text-[14px]">tune</span>
+</div>
+</div>
+<!-- Thermal Paper Slip Container with Hard Box Cast Shadow -->
+<div class="relative w-full bg-surface-container-lowest text-primary shadow-[4px_4px_0px_#000000] overflow-hidden">
+<!-- Jagged Top Guillotine Cut Edge -->
+<div class="w-full h-3 bg-surface" style="clip-path: polygon(0% 100%, 2.5% 0%, 5% 100%, 7.5% 0%, 10% 100%, 12.5% 0%, 15% 100%, 17.5% 0%, 20% 100%, 22.5% 0%, 25% 100%, 27.5% 0%, 30% 100%, 32.5% 0%, 35% 100%, 37.5% 0%, 40% 100%, 42.5% 0%, 45% 100%, 47.5% 0%, 50% 100%, 52.5% 0%, 55% 100%, 57.5% 0%, 60% 100%, 62.5% 0%, 65% 100%, 67.5% 0%, 70% 100%, 72.5% 0%, 75% 100%, 77.5% 0%, 80% 100%, 82.5% 0%, 85% 100%, 87.5% 0%, 90% 100%, 92.5% 0%, 95% 100%, 97.5% 0%, 100% 100%);"></div>
+<div class="p-space-md flex flex-col gap-space-md">
+<!-- Receipt Header Meta -->
+<div class="flex flex-col items-center text-center gap-0.5">
+<div class="bg-primary text-on-primary px-space-sm py-0.5 font-label-sm text-label-sm uppercase tracking-widest">
+          #ORDER-TERMINAL-01
+        </div>
+<div class="font-headline-sm text-headline-sm tracking-tight uppercase mt-space-xs">
+          *** CURRENT ORDER TICKET ***
+        </div>
+<div class="font-label-sm text-label-sm text-on-surface-variant flex items-center justify-center gap-space-sm mt-0.5">
+<span>TKT: #KP-88219</span>
+<span>•</span>
+<span>SRV: CASHIER_A</span>
+<span>•</span>
+<span>TBL: T-04</span>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">
+          DATE: 2025-05-18 14:38:02 WIB
+        </div>
+</div>
+<!-- Separation Rule -->
+<div class="text-center font-label-sm text-label-sm tracking-widest text-on-surface-variant select-none overflow-hidden whitespace-nowrap">
+        ================================================
+      </div>
+<!-- Itemized Ticket Listing -->
+<div class="flex flex-col gap-space-md" id="cart-item-list">
+<!-- Item 1: Americano -->
+<div class="cart-item flex flex-col gap-space-xs p-space-xs bg-surface-container-low transition-colors" data-id="item-1" data-price="15000">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="font-label-md text-label-md font-bold text-primary">01.</span>
+<span class="font-headline-sm text-headline-sm uppercase truncate">AMERICANO</span>
+</div>
+<span class="item-subtotal font-headline-sm text-headline-sm whitespace-nowrap">Rp 15.000,00</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+<span>1 x Rp 15.000,00</span>
+<div class="flex items-center gap-space-sm">
+<!-- Stepper Controls -->
+<div class="flex items-center bg-surface-container-lowest shadow-[2px_2px_0px_#000000]">
+<button aria-label="Decrease Americano" class="btn-decrease w-7 h-7 flex items-center justify-center bg-surface-container-highest text-primary active:bg-primary active:text-on-primary font-headline-sm text-headline-sm leading-none" type="button">
+                  -
+                </button>
+<span class="item-qty w-7 text-center font-headline-sm text-headline-sm text-primary">1</span>
+<button aria-label="Increase Americano" class="btn-increase w-7 h-7 flex items-center justify-center bg-surface-container-highest text-primary active:bg-primary active:text-on-primary font-headline-sm text-headline-sm leading-none" type="button">
+                  +
+                </button>
+</div>
+<!-- Void Button -->
+<button aria-label="Void Americano" class="btn-void flex items-center gap-0.5 px-space-xs py-1 bg-surface-container-highest text-primary active:bg-error active:text-on-error font-label-sm text-label-sm uppercase" type="button">
+<span class="material-symbols-outlined text-[13px] leading-none">delete</span>
+<span>[VOID]</span>
+</button>
+</div>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant pl-space-md">
+            MOD: HOT // NO SUGAR
+          </div>
+</div>
+<!-- Item 2: Cappucino -->
+<div class="cart-item flex flex-col gap-space-xs p-space-xs bg-surface-container-low transition-colors" data-id="item-2" data-price="20000">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="font-label-md text-label-md font-bold text-primary">02.</span>
+<span class="font-headline-sm text-headline-sm uppercase truncate">CAPPUCINO</span>
+</div>
+<span class="item-subtotal font-headline-sm text-headline-sm whitespace-nowrap">Rp 20.000,00</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+<span>1 x Rp 20.000,00</span>
+<div class="flex items-center gap-space-sm">
+<!-- Stepper Controls -->
+<div class="flex items-center bg-surface-container-lowest shadow-[2px_2px_0px_#000000]">
+<button aria-label="Decrease Cappucino" class="btn-decrease w-7 h-7 flex items-center justify-center bg-surface-container-highest text-primary active:bg-primary active:text-on-primary font-headline-sm text-headline-sm leading-none" type="button">
+                  -
+                </button>
+<span class="item-qty w-7 text-center font-headline-sm text-headline-sm text-primary">1</span>
+<button aria-label="Increase Cappucino" class="btn-increase w-7 h-7 flex items-center justify-center bg-surface-container-highest text-primary active:bg-primary active:text-on-primary font-headline-sm text-headline-sm leading-none" type="button">
+                  +
+                </button>
+</div>
+<!-- Void Button -->
+<button aria-label="Void Cappucino" class="btn-void flex items-center gap-0.5 px-space-xs py-1 bg-surface-container-highest text-primary active:bg-error active:text-on-error font-label-sm text-label-sm uppercase" type="button">
+<span class="material-symbols-outlined text-[13px] leading-none">delete</span>
+<span>[VOID]</span>
+</button>
+</div>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant pl-space-md">
+            MOD: OAT MILK [+Rp 0] // EXTRA FOAM
+          </div>
+</div>
+<!-- Item 3: Kopi Susu Gula Aren -->
+<div class="cart-item flex flex-col gap-space-xs p-space-xs bg-surface-container-low transition-colors" data-id="item-3" data-price="20000">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="font-label-md text-label-md font-bold text-primary">03.</span>
+<span class="font-headline-sm text-headline-sm uppercase truncate">KOPI SUSU GULA AREN</span>
+</div>
+<span class="item-subtotal font-headline-sm text-headline-sm whitespace-nowrap">Rp 20.000,00</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+<span>1 x Rp 20.000,00</span>
+<div class="flex items-center gap-space-sm">
+<!-- Stepper Controls -->
+<div class="flex items-center bg-surface-container-lowest shadow-[2px_2px_0px_#000000]">
+<button aria-label="Decrease Kopi Susu" class="btn-decrease w-7 h-7 flex items-center justify-center bg-surface-container-highest text-primary active:bg-primary active:text-on-primary font-headline-sm text-headline-sm leading-none" type="button">
+                  -
+                </button>
+<span class="item-qty w-7 text-center font-headline-sm text-headline-sm text-primary">1</span>
+<button aria-label="Increase Kopi Susu" class="btn-increase w-7 h-7 flex items-center justify-center bg-surface-container-highest text-primary active:bg-primary active:text-on-primary font-headline-sm text-headline-sm leading-none" type="button">
+                  +
+                </button>
+</div>
+<!-- Void Button -->
+<button aria-label="Void Kopi Susu" class="btn-void flex items-center gap-0.5 px-space-xs py-1 bg-surface-container-highest text-primary active:bg-error active:text-on-error font-label-sm text-label-sm uppercase" type="button">
+<span class="material-symbols-outlined text-[13px] leading-none">delete</span>
+<span>[VOID]</span>
+</button>
+</div>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant pl-space-md">
+            MOD: LESS ICE (50%) // NORMAL AREN
+          </div>
+</div>
+</div>
+<!-- Perforated Tear Line -->
+<div class="w-full flex items-center gap-space-xs my-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">[TEAR-HERE]</span>
+<div class="flex-1 h-0 border-t-2 border-dashed border-primary"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">✂</span>
+</div>
+<!-- Quick Add Add-On Ribbon -->
+<div class="flex flex-col gap-space-xs bg-surface-container p-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm uppercase">
+<span class="font-bold">+ REEL ADD-ONS:</span>
+<span class="text-on-surface-variant">TAP TO APPEND</span>
+</div>
+<div class="flex gap-space-xs overflow-x-auto pb-0.5">
+<button class="quick-addon whitespace-nowrap bg-surface-container-lowest px-space-xs py-1 font-label-sm text-label-sm uppercase text-primary active:bg-primary active:text-on-primary shadow-[2px_2px_0px_#000000]" data-name="EXTRA SHOT" data-price="5000" type="button">
+            + ESPRESSO SHOT (5K)
+          </button>
+<button class="quick-addon whitespace-nowrap bg-surface-container-lowest px-space-xs py-1 font-label-sm text-label-sm uppercase text-primary active:bg-primary active:text-on-primary shadow-[2px_2px_0px_#000000]" data-name="CROISSANT" data-price="18000" type="button">
+            + BUTTER CROISSANT (18K)
+          </button>
+<button class="quick-addon whitespace-nowrap bg-surface-container-lowest px-space-xs py-1 font-label-sm text-label-sm uppercase text-primary active:bg-primary active:text-on-primary shadow-[2px_2px_0px_#000000]" data-name="AREN SYRUP" data-price="3000" type="button">
+            + EXTRA AREN (3K)
+          </button>
+</div>
+</div>
+<!-- Order Calculation Slip -->
+<div class="flex flex-col gap-1 bg-surface-container-low p-space-sm font-label-md text-label-md">
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>ITEMS COUNT</span>
+<span class="font-bold text-primary" id="summary-count">3</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>SUBTOTAL</span>
+<span class="font-bold text-primary" id="summary-subtotal">Rp 55.000,00</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>TAX INCL (0%)</span>
+<span class="font-bold text-primary">Rp 0,00</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>DISCOUNT / VOUCHER</span>
+<span class="font-bold text-primary">Rp 0,00</span>
+</div>
+<div class="text-center font-label-sm text-label-sm tracking-widest text-on-surface-variant select-none my-1">
+          ------------------------------------------------
+        </div>
+<div class="flex justify-between items-baseline pt-space-xs">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm tracking-tight text-primary uppercase">TOTAL NET</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">CURRENCY: IDR</span>
+</div>
+<span class="font-headline-lg-mobile text-headline-lg-mobile tracking-tight font-bold text-primary" id="summary-total">Rp 55.000,00</span>
+</div>
+</div>
+<!-- Customer Loyalty / Barcode Matrix Block -->
+<div class="flex flex-col items-center gap-space-xs py-space-xs bg-surface-container-lowest">
+<div class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">
+          * * * SCAN FOR LOYALTY STAMP * * *
+        </div>
+<!-- Sharp Vector Thermal Barcode Pattern -->
+<div aria-hidden="true" class="w-full flex justify-center items-center py-1 overflow-hidden">
+<div class="h-10 flex items-stretch gap-[2px] bg-surface-container-lowest p-1">
+<span class="w-[3px] bg-primary"></span>
+<span class="w-[1px] bg-transparent"></span>
+<span class="w-[4px] bg-primary"></span>
+<span class="w-[2px] bg-transparent"></span>
+<span class="w-[2px] bg-primary"></span>
+<span class="w-[1px] bg-transparent"></span>
+<span class="w-[5px] bg-primary"></span>
+<span class="w-[2px] bg-transparent"></span>
+<span class="w-[1px] bg-primary"></span>
+<span class="w-[3px] bg-transparent"></span>
+<span class="w-[6px] bg-primary"></span>
+<span class="w-[2px] bg-transparent"></span>
+<span class="w-[2px] bg-primary"></span>
+<span class="w-[4px] bg-transparent"></span>
+<span class="w-[4px] bg-primary"></span>
+<span class="w-[1px] bg-transparent"></span>
+<span class="w-[3px] bg-primary"></span>
+<span class="w-[2px] bg-transparent"></span>
+<span class="w-[5px] bg-primary"></span>
+<span class="w-[1px] bg-transparent"></span>
+<span class="w-[2px] bg-primary"></span>
+<span class="w-[3px] bg-transparent"></span>
+<span class="w-[4px] bg-primary"></span>
+<span class="w-[2px] bg-transparent"></span>
+<span class="w-[6px] bg-primary"></span>
+<span class="w-[1px] bg-transparent"></span>
+<span class="w-[3px] bg-primary"></span>
+<span class="w-[2px] bg-transparent"></span>
+<span class="w-[2px] bg-primary"></span>
+<span class="w-[1px] bg-transparent"></span>
+<span class="w-[4px] bg-primary"></span>
+<span class="w-[3px] bg-transparent"></span>
+<span class="w-[5px] bg-primary"></span>
+<span class="w-[2px] bg-transparent"></span>
+<span class="w-[3px] bg-primary"></span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm tracking-widest text-primary">89927610044910</span>
+</div>
+<!-- Checkout Action Button (Tactile Monospace Bar) -->
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<button class="w-full py-space-md px-space-sm bg-primary text-on-primary font-headline-sm text-headline-sm uppercase tracking-wider shadow-[4px_4px_0px_#5f5e5e] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[2px_2px_0px_#5f5e5e] transition-all flex items-center justify-center gap-space-xs" id="checkout-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">print</span>
+<span id="checkout-label">[ PROCEED // RP 55.000,00 ]</span>
+</button>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm px-space-xs">
+<span>DRAWER: CASH / QRIS AUTO-OPEN</span>
+<span>SLIP #01 OF 01</span>
+</div>
+</div>
+</div>
+<!-- Jagged Bottom Guillotine Cut Edge -->
+<div class="w-full h-3 bg-surface" style="clip-path: polygon(0% 0%, 2.5% 100%, 5% 0%, 7.5% 100%, 10% 0%, 12.5% 100%, 15% 0%, 17.5% 100%, 20% 0%, 22.5% 100%, 25% 0%, 27.5% 100%, 30% 0%, 32.5% 100%, 35% 0%, 37.5% 100%, 40% 0%, 42.5% 100%, 45% 0%, 47.5% 100%, 50% 0%, 52.5% 100%, 55% 0%, 57.5% 100%, 60% 0%, 62.5% 100%, 65% 0%, 67.5% 100%, 70% 0%, 72.5% 100%, 75% 0%, 77.5% 100%, 80% 0%, 82.5% 100%, 85% 0%, 87.5% 100%, 90% 0%, 92.5% 100%, 95% 0%, 97.5% 100%, 100% 0%);"></div>
+</div>
+<!-- Operational Footer Log Strip -->
+<div class="flex items-center justify-between mt-space-sm px-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px]">receipt</span>
+<span>BUFFER SYNC: OK</span>
+</div>
+<span>KOPISOP JOS v2.4-POS</span>
+</div>
+</div>
+<script>
+  (function () {
+    const formatIDR = (val) => {
+      const parts = val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+      return "Rp " + parts + ",00";
+    };
+
+    function recalculate() {
+      const items = document.querySelectorAll(".cart-item");
+      let totalQty = 0;
+      let totalSum = 0;
+
+      items.forEach((item) => {
+        const price = parseInt(item.getAttribute("data-price"), 10) || 0;
+        const qtyEl = item.querySelector(".item-qty");
+        const qty = parseInt(qtyEl.textContent, 10) || 0;
+        const subtotal = price * qty;
+        totalQty += qty;
+        totalSum += subtotal;
+
+        const subtotalEl = item.querySelector(".item-subtotal");
+        if (subtotalEl) {
+          subtotalEl.textContent = formatIDR(subtotal);
+        }
+      });
+
+      const countEl = document.getElementById("summary-count");
+      const subtotalEl = document.getElementById("summary-subtotal");
+      const totalEl = document.getElementById("summary-total");
+      const checkoutLabel = document.getElementById("checkout-label");
+
+      if (countEl) countEl.textContent = totalQty.toString();
+      if (subtotalEl) subtotalEl.textContent = formatIDR(totalSum);
+      if (totalEl) totalEl.textContent = formatIDR(totalSum);
+      if (checkoutLabel) {
+        checkoutLabel.textContent = `[ PROCEED // ${formatIDR(totalSum).toUpperCase()} ]`;
+      }
+    }
+
+    const container = document.getElementById("cart-item-list");
+    if (container) {
+      container.addEventListener("click", (e) => {
+        const target = e.target;
+        const decBtn = target.closest(".btn-decrease");
+        const incBtn = target.closest(".btn-increase");
+        const voidBtn = target.closest(".btn-void");
+
+        if (incBtn) {
+          const item = incBtn.closest(".cart-item");
+          const qtyEl = item.querySelector(".item-qty");
+          let val = parseInt(qtyEl.textContent, 10) || 0;
+          qtyEl.textContent = (val + 1).toString();
+          recalculate();
+        } else if (decBtn) {
+          const item = decBtn.closest(".cart-item");
+          const qtyEl = item.querySelector(".item-qty");
+          let val = parseInt(qtyEl.textContent, 10) || 0;
+          if (val > 1) {
+            qtyEl.textContent = (val - 1).toString();
+            recalculate();
+          } else {
+            // Optional removal if reducing below 1
+            item.remove();
+            recalculate();
+          }
+        } else if (voidBtn) {
+          const item = voidBtn.closest(".cart-item");
+          item.remove();
+          recalculate();
+        }
+      });
+    }
+
+    // Quick add-on buttons
+    const quickAddons = document.querySelectorAll(".quick-addon");
+    quickAddons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const name = btn.getAttribute("data-name");
+        const price = parseInt(btn.getAttribute("data-price"), 10) || 0;
+        const currentCount = document.querySelectorAll(".cart-item").length + 1;
+        const indexStr = currentCount < 10 ? "0" + currentCount : currentCount.toString();
+
+        const newItem = document.createElement("div");
+        newItem.className = "cart-item flex flex-col gap-space-xs p-space-xs bg-surface-container-low transition-colors";
+        newItem.setAttribute("data-price", price.toString());
+        newItem.innerHTML = `
+          <div class="flex items-start justify-between gap-space-sm">
+            <div class="flex items-center gap-space-xs min-w-0">
+              <span class="font-label-md text-label-md font-bold text-primary">${indexStr}.</span>
+              <span class="font-headline-sm text-headline-sm uppercase truncate">${name}</span>
+            </div>
+            <span class="item-subtotal font-headline-sm text-headline-sm whitespace-nowrap">${formatIDR(price)}</span>
+          </div>
+          <div class="flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+            <span>1 x ${formatIDR(price)}</span>
+            <div class="flex items-center gap-space-sm">
+              <div class="flex items-center bg-surface-container-lowest shadow-[2px_2px_0px_#000000]">
+                <button type="button" class="btn-decrease w-7 h-7 flex items-center justify-center bg-surface-container-highest text-primary font-headline-sm text-headline-sm leading-none">-</button>
+                <span class="item-qty w-7 text-center font-headline-sm text-headline-sm text-primary">1</span>
+                <button type="button" class="btn-increase w-7 h-7 flex items-center justify-center bg-surface-container-highest text-primary font-headline-sm text-headline-sm leading-none">+</button>
+              </div>
+              <button type="button" class="btn-void flex items-center gap-0.5 px-space-xs py-1 bg-surface-container-highest text-primary font-label-sm text-label-sm uppercase">
+                <span class="material-symbols-outlined text-[13px] leading-none">delete</span>
+                <span>[VOID]</span>
+              </button>
+            </div>
+          </div>
+          <div class="font-label-sm text-label-sm text-on-surface-variant pl-space-md">
+            MOD: DIRECT ROLL ADDITION
+          </div>
+        `;
+        if (container) {
+          container.appendChild(newItem);
+          recalculate();
+        }
+      });
+    });
+
+    const checkoutBtn = document.getElementById("checkout-btn");
+    if (checkoutBtn) {
+      checkoutBtn.addEventListener("click", () => {
+        const prevText = checkoutBtn.innerHTML;
+        checkoutBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[20px] animate-spin">sync</span>
+          <span>[ CUTTING THERMAL TICKET... ]</span>
+        `;
+        setTimeout(() => {
+          checkoutBtn.innerHTML = `
+            <span class="material-symbols-outlined text-[20px]">check_circle</span>
+            <span>[ SLIP DISPATCHED ]</span>
+          `;
+          setTimeout(() => {
+            checkoutBtn.innerHTML = prevText;
+          }, 1800);
+        }, 1200);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]" data-active-classes="bg-primary text-on-primary"><div class="flex items-center justify-around h-16 px-gutter"><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-sm py-space-xs text-on-surface-variant transition-colors" data-path="pos-menu" href="#"><span class="material-symbols-outlined text-[20px]">point_of_sale</span><span class="font-label-sm text-label-sm uppercase tracking-wider mt-0.5">[MENU]</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-sm py-space-xs transition-colors bg-primary text-on-primary" data-path="cart" href="#"><span class="material-symbols-outlined text-[20px]">shopping_basket</span><span class="font-label-sm text-label-sm uppercase tracking-wider mt-0.5">[CART]</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-sm py-space-xs text-on-surface-variant transition-colors" data-path="payment-history" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-label-sm text-label-sm uppercase tracking-wider mt-0.5">[LOG]</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-sm py-space-xs text-on-surface-variant transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-label-sm text-label-sm uppercase tracking-wider mt-0.5">[CFG]</span></a></div></nav></body></html>

@@ -1,5 +1,15 @@
 # UI Design Direction
 
+## Active Direction: Stitch Monochrome (Receipt-Tape Terminal)
+
+> Decision (2026-10-13): the four POS flow screens follow the Stitch mockups in
+> `design/stitch/` — monochrome black/white/gray, system monospace font,
+> uppercase terminal labels, `[ BRACKETED ]` actions, dashed receipt dividers.
+> This replaces the earlier white/green direction below.
+> Tokens live in `lib/core/theme/app_theme.dart`; shared pieces in
+> `lib/core/widgets/` (`BracketButton`, `OutlineBracketButton`, `TerminalLabel`,
+> `DashedDivider`).
+
 ## Current Iteration: Functionality First
 
 The UI should be:
@@ -7,7 +17,7 @@ The UI should be:
 - **Modern**
 - **Clean**
 - Easy for a cashier to understand
-- Primarily **white with green as the main accent**
+- Primarily **white with green as the main accent** (superseded above for the POS flow screens)
 
 Material components can be used for practical implementation, but the app should not be treated as a generic Material Design project.
 
